@@ -5,6 +5,11 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const posts = [
+  { title: 'React Testing', excerpt: 'Learn React Testing'},
+  { title: 'React with Tailwind', excerpt: 'Learn React with Tailwind'},
+];
+
 export default function Home() {
   return (
     <div className='container mx-auto px-10 mb-8'>
@@ -14,6 +19,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-gray-400">
+        {posts.map((post, index) => (
+          <div>
+            {post.title}
+            {post.excerpt}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
