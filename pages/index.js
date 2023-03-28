@@ -22,11 +22,17 @@ export default function Home() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-gray-400">
         {posts.map((post, index) => (
-          <div>
+          <div className='lg:col-span-8 col-span-1'>
             {post.title}
             {post.excerpt}
           </div>
         ))}
+      </div>
+      
+      <div className='lg:col-span-4 col-span-1'>
+        <div className='lg:sticky relative top-8'>
+          
+        </div>
       </div>
     </div>
   )
